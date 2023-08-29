@@ -6,13 +6,13 @@
     <title>Anvithgopa Photography</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon"  href="images/logo1.png">
+    <link rel="icon"  href="logo1.png">
  </head>
  <body>
    
     <section class="sub-header">
       <nav>
-         <a href="index.html"><img src="images/logo1.png" alt="Loading"></a>
+         <a href="index.html"><img src="logo1.png" alt="Loading"></a>
          <div class="nav-links" id="navLinks">
             <i class="fa fa-times" onclick="hidemenu()"></i>
             <ul>
@@ -72,7 +72,7 @@
 
 
       
-      <div class="contact-col">
+      <!-- <div class="contact-col">
          <form action="form-handler.php" method="post">
             <input type="text" name="name" placeholder="ENTER YOUR NAME..." required>
             <input type="text" name="email" placeholder="EMAIL ADDRESS..." required>
@@ -81,8 +81,61 @@
             <button type="submmit" class="btn">SEND MESSAGE</button>
 
 
-         </form>
+         </form> -->
+         <style>
+            .field {
+  margin-bottom: 10px;
+}
 
+.field label {
+  display: block;
+  font-size: 12px;
+  color: #777;
+}
+
+.field input {
+  display: block;
+  min-width: 250px;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+input[type="submit"] {
+  display: block;
+  padding: 6px 30px;
+  font-size: 14px;
+  background-color: #4460AA;
+  color: #fff;
+  border: none
+}
+         </style>
+         <form id="form">
+            <div class="field">
+              <label for="from_name">from_name</label>
+              <input type="text" name="from_name" id="from_name">
+            </div>
+            <div class="field">
+              <label for="to_name">to_name</label>
+              <input type="text" name="to_name" id="to_name">
+            </div>
+            <div class="field">
+              <label for="email_id">email_id</label>
+              <input type="text" name="email_id" id="email_id">
+            </div>
+            <div class="field">
+              <label for="message">message</label>
+              <input type="text" name="message" id="message">
+            </div>
+          
+            <input type="submit" id="button" value="Send Email" >
+          </form>
+          
+          <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+          
+          <script type="text/javascript">
+            emailjs.init('85CtRN5GLzJ6RPJs2')
+          </script>
 
 
 
@@ -150,5 +203,31 @@
 
    
 
+
+
+
+      <script>
+const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_d3ut1xc';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
+
+      </script>
  </body>
  </html>
