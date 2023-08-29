@@ -7,7 +7,7 @@
 .header{
     min-height:100vh;
     width:100%;
-    background-image: linear-gradient(rgba(4, 4, 4, 0.3),rgba(4, 5, 4, 0.7)),url(images/background.jpg);
+    background-image: linear-gradient(rgba(4, 4, 4, 0.3),rgba(4, 5, 4, 0.7)),url(background.jpg);
     background-position:center;    
     background-size:cover;
     position:relative ;
@@ -398,7 +398,7 @@ nav .fa{
 .cta{
   margin: 100px auto;
   width: 80%;
-  background-image: linear-gradient(rgba(9, 5, 1, 0.8),rgba(51, 50, 49, 0.8)),url(images/bedi2.jpg);
+  background-image: linear-gradient(rgba(9, 5, 1, 0.8),rgba(51, 50, 49, 0.8)),url(bedi2.jpg);
   background-position: center;
   background-size: cover;
   border-radius: 10px;
@@ -496,7 +496,7 @@ font-weight:600;
 
   height: 30vh;
   width: 100%;
-  background-image: linear-gradient(rgba(181, 126, 236, 0.8),rgba(140, 46, 234, 0.8)),url(images/988.jpeg);
+  background-image: linear-gradient(rgba(181, 126, 236, 0.8),rgba(140, 46, 234, 0.8)),url(988.jpeg);
   background-position: center;
   background-size: cover;
   border-style: dotted;
@@ -699,7 +699,7 @@ z-index: -1;
   height: 500px;
   margin:10px;
   border-radius: 50px;
-  background: url(images/lighting.jpeg);
+  background: url(lighting.jpeg);
   background-size:cover;
   background-position: center;
   position: relative;
@@ -707,22 +707,22 @@ z-index: -1;
 }
 
 .img-box:nth-child(2){
-  background: url(images/ratha.jpg);
+  background: url(ratha.jpg);
   background-size:cover;
   background-position: center;
 }
 .img-box:nth-child(3){
-  background: url(images/nature3.JPG);
+  background: url(nature3.JPG);
   background-size:cover;
   background-position: center;
 }
 .img-box:nth-child(4){
-  background: url(images/bedi2.jpg);
+  background: url(bedi2.jpg);
   background-size:cover;
   background-position: center;
 }
 .img-box:nth-child(5){
-  background: url(images/creativity.jpg);
+  background: url(creativity.jpg);
   background-size:cover;
   background-position: center;
 } 
